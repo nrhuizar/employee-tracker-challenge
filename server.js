@@ -1,28 +1,3 @@
-// const express = require('express');
-// const mysql = require('mysql');
-// const inquirer = require('inquirer');
-// const connection = require('./connection/connection');
-// const consoleTable = require('console.table');
-// const PORT = process.env.PORT || 3001;
-// const app = express();
-
-// // Express middleware
-// app.use(express.urlencoded({ extended: false }));
-// app.use(express.json());
-
-// // Default response for any other request(Not Found) Catch all
-// app.use((req, res) => {
-//   res.status(404).end();
-// }); 
-
-// // Start server after DB connection
-// connection.on('open', () => {
-//   app.listen(PORT, () => {
-//     console.log(`Server running on port ${PORT}`);
-//   });
-// });
-
-  
 const mysql = require('mysql');
 const inquirer = require('inquirer');
 const consoleTable = require('console.table')
@@ -82,9 +57,6 @@ function options() {
                       break;
                   case 'Update employee role':
                       updateRole();
-                      break;
-                  case 'Delete an employee':
-                      deleteEmployee();
                       break;
                   case 'EXIT': 
                       exitApp();
